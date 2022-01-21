@@ -209,7 +209,7 @@ function updateList (checksum, ipfsHash) {
   if (node[node.default].gateway == 80 || node[node.default].protocol == "https"){
     var gatewayPort = ''
 	document.getElementById(checksum).innerHTML = '<strong class="fileName"><a href="' + node[node.default].protocol + '://' + node[node.default].address + '/ipfs/' + ipfsHash + '" class="uploaded" target="_blank">' + filesOk[i].name + ' <img src="img/link.png" width="12px"/></a></strong>' +
-  '</a></spam><br> <spam id="fileProperties"> (' + (filesOk[i].type || 'n/a' ) +') - ' + filesOk[i].size + ' bytes, last modified: ' + new Date(filesOk[i].lastModified).toLocaleDateString() +'</spam>' + '<br> <br> <spam id="fileurl">' + ' IPFS URL: ' + node[node.default].protocol + '://' + node[node.default].address + '/ipfs/' + ipfsHash + '</spam>'
+  '</a></spam><br> <spam id="fileProperties"> (' + (filesOk[i].type || 'n/a' ) +') - ' + filesOk[i].size + ' bytes, last modified: ' + new Date(filesOk[i].lastModified).toLocaleDateString() +'</spam>' + '<br> <br> <spam id="fileurl">' + ' IPFS URL: ' + node[node.default].protocol + '://ipfs.io' + '/ipfs/' + ipfsHash + '</spam>'
   } else {
     var gatewayPort = node[node.default].gateway
 	document.getElementById(checksum).innerHTML = '<strong class="fileName"><a href="' + node[node.default].protocol + '://' + node[node.default].address + ':' + gatewayPort + '/ipfs/' + ipfsHash + '" class="uploaded" target="_blank">' + filesOk[i].name + ' <img src="img/link.png" width="12px"/></a></strong>' +
